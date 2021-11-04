@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.button.MaterialButton android:id="@id/exo_pause"
+        app:icon="@drawable/exo_icon_pause"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/purple_200"
+        android:background="@color/black"
+        style="@style/ExoMediaButton.Pause"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@id/exo_play"
+        app:icon="@drawable/exo_icon_play"
+        app:cornerRadius="10dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/purple_200"
+        android:background="@color/black"
+        style="@style/ExoMediaButton.Play"/>
+</FrameLayout>

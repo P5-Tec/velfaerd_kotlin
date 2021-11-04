@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/activity_main.xml" value="0.21331521739130435" />
+        <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout-land/fragment_start_page.xml" value="0.25" />
+        <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout-sw600dp/fragment_start_page.xml" value="0.25" />
+        <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/activity_main.xml" value="0.19" />
+        <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/content_main.xml" value="0.22" />
+        <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/exo_player_control_view.xml" value="0.75" />
+        <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/fragment_start_page.xml" value="0.22" />
       </map>
     </option>
   </component>
