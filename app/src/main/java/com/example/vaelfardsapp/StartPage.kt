@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.vaelfardsapp.databinding.FragmentStartPageBinding
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.SimpleExoPlayer
@@ -42,6 +43,13 @@ class StartPage : Fragment() {
             exoPlayer.playWhenReady = true
         }
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnStyrker.setOnClickListener{
+            findNavController().navigate(R.id.action_startPage_to_styrkeModelFragment)
+        }
     }
 
     override fun onResume() {

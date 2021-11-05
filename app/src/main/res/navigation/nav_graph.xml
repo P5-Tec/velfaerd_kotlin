@@ -9,5 +9,14 @@
         android:id="@+id/startPage"
         android:name="com.example.vaelfardsapp.StartPage"
         android:label="fragment_start_page"
-        tools:layout="@layout/fragment_start_page" />
+        tools:layout="@layout/fragment_start_page" >
+        <action
+            android:id="@+id/action_startPage_to_styrkeModelFragment"
+            app:destination="@id/styrkeModelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/styrkeModelFragment"
+        android:name="com.example.vaelfardsapp.styrkeModelFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" />
 </navigation>
