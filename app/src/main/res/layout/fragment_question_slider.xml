@@ -69,6 +69,7 @@
                 android:valueTo="5.0"
                 android:stepSize="1.0"
                 android:value="3.0"
+                app:labelBehavior="gone"
                 />
 
             <!-- Here we have numbers from 1 to 5 with contrains to each other and parent -->
