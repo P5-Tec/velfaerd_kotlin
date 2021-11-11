@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.*
 import com.example.vaelfardsapp.constants.Styrker
-import com.example.vaelfardsapp.placeholder.PlaceholderContent
 
 /**
  * A fragment representing a list of Items.

@@ -5,7 +5,7 @@ import com.example.vaelfardsapp.models.styrkeModel
 
 object Styrker {
     fun getStyrker(): ArrayList<styrkeModel> {
-        val styrkeList = arrayListOf<styrkeModel>(
+        return arrayListOf(
             styrkeModel("Styrke 1", "Long ass text about stuff", R.drawable.iconmod),
             styrkeModel("Styrke 2", "Long ass text about stuff", R.drawable.iconnysgerrig),
             styrkeModel("Styrke 3", "Long ass text about stuff", R.drawable.iconsamarbejde),
@@ -27,6 +27,5 @@ object Styrker {
             styrkeModel("Styrke 4", "Long ass text about stuff", R.drawable.iconsocialintelligens),
             styrkeModel("Styrke 5", "Long ass text about stuff", R.drawable.icontaknemmelighed),
         )
-        return styrkeList
     }
 }

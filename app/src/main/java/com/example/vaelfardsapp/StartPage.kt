@@ -47,9 +47,8 @@ class StartPage : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnStyrker.setOnClickListener{
-            findNavController().navigate(R.id.action_startPage_to_styrkeModelFragment)
-        }
+        binding.btnStyrker.setOnClickListener{ findNavController().navigate(R.id.action_startPage_to_styrkeModelFragment) }
+        binding.btnVidere.setOnClickListener { findNavController().navigate(R.id.action_startPage_to_questionFragment) }
     }
 
     override fun onResume() {
