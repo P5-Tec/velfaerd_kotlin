@@ -3,6 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.13034188034188035" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.13034188034188035" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/drawable/ic_baseline_keyboard_arrow_up_24.xml" value="0.13034188034188035" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/drawable/ic_kreativitet_background.xml" value="0.13034188034188035" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/drawable/ic_launcher_background.xml" value="0.13034188034188035" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout-sw600dp/fragment_item_list.xml" value="0.13516009852216748" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout-sw600dp/fragment_start_page.xml" value="0.14993169398907105" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/activity_main.xml" value="0.22393162393162394" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/exo_player_control_view.xml" value="0.67" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/fragment_item.xml" value="0.22393162393162394" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/fragment_item_list.xml" value="0.25" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/fragment_item_list2.xml" value="0.22393162393162394" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/fragment_select_strength.xml" value="0.22" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/fragment_start_page.xml" value="0.19882246376811594" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/fragment_strength_item.xml" value="0.22393162393162394" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/fragment_strength_item_list.xml" value="0.25" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/fragment_strengths_expandable_list_view.xml" value="0.25" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/fragment_strengths_list.xml" value="0.22393162393162394" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/layout_child.xml" value="0.22393162393162394" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/layout_group.xml" value="0.22393162393162394" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/list_item.xml" value="0.22393162393162394" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/layout/styrke_fragment_item.xml" value="0.19882246376811594" />
+        <entry key="..\:/Users/maje/Documents/Projects/velfaerd_kotlin/app/src/main/res/mipmap-anydpi-v26/ic_kreativitet.xml" value="0.23417721518987342" />
         <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout-land/fragment_item_list_v2.xml" value="0.3205467372134039" />
         <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout-land/fragment_start_page.xml" value="0.25" />
         <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout-sw600dp/fragment_start_page.xml" value="0.25" />

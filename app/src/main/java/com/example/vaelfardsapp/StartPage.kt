@@ -2,11 +2,10 @@ package com.example.vaelfardsapp
 
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.vaelfardsapp.databinding.FragmentStartPageBinding
 import com.google.android.exoplayer2.MediaItem
@@ -26,7 +25,7 @@ class StartPage : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentStartPageBinding.inflate(inflater, container, false)
 
@@ -47,21 +46,21 @@ class StartPage : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnStyrker.setOnClickListener{
-            findNavController().navigate(R.id.action_startPage_to_styrkeModelFragment)
+        binding.btnStyrker.setOnClickListener {
+            findNavController().navigate(R.id.action_startPage_to_strengthsExpandableListView)
         }
     }
 
     override fun onResume() {
         super.onResume()
-        if (!player.isPlaying){
+        if (!player.isPlaying) {
             player.play()
         }
     }
 
     override fun onPause() {
         super.onPause()
-        if (player.isPlaying){
+        if (player.isPlaying) {
             player.pause()
         }
     }

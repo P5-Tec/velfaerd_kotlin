@@ -9,14 +9,18 @@
         android:id="@+id/startPage"
         android:name="com.example.vaelfardsapp.StartPage"
         android:label="fragment_start_page"
-        tools:layout="@layout/fragment_start_page" >
+        tools:layout="@layout/fragment_start_page">
         <action
-            android:id="@+id/action_startPage_to_styrkeModelFragment"
-            app:destination="@id/styrkeModelFragment" />
+            android:id="@+id/action_startPage_to_strengthsExpandableListView"
+            app:destination="@id/strengthsExpandableListView"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
-        android:id="@+id/styrkeModelFragment"
-        android:name="com.example.vaelfardsapp.styrkeModelFragment"
-        android:label="fragment_item_list"
-        tools:layout="@layout/fragment_item_list" />
+        android:id="@+id/strengthsExpandableListView"
+        android:name="com.example.vaelfardsapp.expandableListView.StrengthsExpandableListView"
+        android:label="fragment_strengths_expandable_list_view"
+        tools:layout="@layout/fragment_strengths_expandable_list_view" />
 </navigation>
