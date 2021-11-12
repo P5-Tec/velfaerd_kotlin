@@ -1,4 +1,4 @@
-package com.example.vaelfardsapp
+package com.example.vaelfardsapp.views
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.*
+import com.example.vaelfardsapp.R
 import com.example.vaelfardsapp.constants.Styrker
+import com.example.vaelfardsapp.adapters.styrkeModelRecyclerViewAdapter
 
 /**
  * A fragment representing a list of Items.

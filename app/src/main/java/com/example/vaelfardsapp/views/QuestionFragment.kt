@@ -8,6 +8,7 @@ import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.vaelfardsapp.R
@@ -22,14 +23,13 @@ class QuestionFragment : Fragment() {
     private var questionSubheader: TextView? = null
     private var questionMaintext: TextView? = null
 
-    private val questionModel: QuestionsViewModel by viewModels()
+    private val questionViewModel: QuestionsViewModel by viewModels()
     private var navFuse: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
-    //TODO: Send content to view, implement slider, value check to stop progression without valid answer
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,24 +43,26 @@ class QuestionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         this.checkFuse()
         this.updateView()
 
         binding.btnVidere.setOnClickListener {
-            //change navigation path
+            saveAnswer()
             //if (navFuse){ findNavController().navigate(R.id.) }
-            questionModel.nextQuestion().also {
+            questionViewModel.nextQuestion().also {
+                resetSlider()
                 updateView()
                 this.checkFuse()
             }
         }
 
         binding.btnTilbage.setOnClickListener {
-            if (questionModel.getCurrentIndex == questionModel.getFirstIndex){
+            if (questionViewModel.getCurrentIndex == questionViewModel.getFirstIndex){
+                resetSlider()
                 findNavController().navigateUp()
             }
-            questionModel.prevQuestion().also {
+            questionViewModel.prevQuestion().also {
+                resetSlider()
                 this.updateView()
                 binding.btnVidere.text = "Videre"
                 if (navFuse){ navFuse = false }
@@ -69,12 +71,12 @@ class QuestionFragment : Fragment() {
     }
 
     private fun updateView(){
-        questionSubheader!!.text = questionModel.currentQuestionSubHeader
-        questionMaintext!!.text = questionModel.currentQuestionText
+        questionSubheader!!.text = questionViewModel.currentQuestionSubHeader
+        questionMaintext!!.text = questionViewModel.currentQuestionText
     }
 
     private fun checkFuse(){
-        if (questionModel.getCurrentIndex == questionModel.getQuestionsMax){
+        if (questionViewModel.getCurrentIndex == questionViewModel.getQuestionsMax){
             binding.btnVidere.text = "Afslut"
             navFuse = true
         }else{navFuse = false}
@@ -82,5 +84,10 @@ class QuestionFragment : Fragment() {
 
     private fun saveAnswer(){
         //implement sharedPrefs
+        Log.d("tag", "result saved: " + questionViewModel.questionAnswer.value.toString())
+    }
+
+    private fun resetSlider(){
+        questionViewModel.resetSlider()
     }
 }

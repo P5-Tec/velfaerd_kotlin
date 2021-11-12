@@ -11,5 +11,5 @@
     android:layout_marginRight="0dp"
     app:layoutManager="LinearLayoutManager"
     android:orientation="horizontal"
-    tools:context=".styrkeModelFragment"
+    tools:context=".views.styrkeModelFragment"
     tools:listitem="@layout/styrke_fragment_item" />

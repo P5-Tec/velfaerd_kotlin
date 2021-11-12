@@ -1,8 +1,5 @@
-package com.example.vaelfardsapp
+package com.example.vaelfardsapp.adapters
 
-import android.graphics.drawable.Drawable
-import android.net.Uri
-import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -10,7 +7,6 @@ import android.widget.ImageView
 
 import com.example.vaelfardsapp.databinding.StyrkeFragmentItemBinding
 import com.example.vaelfardsapp.models.styrkeModel
-import java.io.InputStream
 
 /**
  * [RecyclerView.Adapter] that can display a [PlaceholderItem].
@@ -32,9 +28,9 @@ class styrkeModelRecyclerViewAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
         val item = values[position]
        // holder.styrkeName.text = item.styrkeName
-
         holder.styrkeImg.setImageResource(item.imagePath)
     }
 

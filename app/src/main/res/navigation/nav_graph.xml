@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/styrkeModelFragment"
-        android:name="com.example.vaelfardsapp.styrkeModelFragment"
+        android:name="com.example.vaelfardsapp.views.styrkeModelFragment"
         android:label="fragment_item_list"
         tools:layout="@layout/fragment_item_list" />
     <fragment
