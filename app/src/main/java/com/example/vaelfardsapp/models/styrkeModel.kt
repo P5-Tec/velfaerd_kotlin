@@ -1,11 +1,7 @@
 package com.example.vaelfardsapp.models
 
-import android.net.Uri
-
-data class styrkeModel (
+data class StyrkeModel(
     val styrkeName: String,
     val styrkeTxt: String,
-    val imagePath: Int)
-{
-
-}
+    val imagePath: Int
+)
