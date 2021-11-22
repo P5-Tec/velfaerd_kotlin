@@ -1,7 +1,7 @@
 package com.example.vaelfardsapp.models
 
-class questionModel (
-    val questionSubheader: String,
-    val questionMainText: String,
-    val questionVideo: Int
+data class StyrkeModel(
+    val styrkeName: String,
+    val styrkeTxt: String,
+    val imagePath: Int
 )
