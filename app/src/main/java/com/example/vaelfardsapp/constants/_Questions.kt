@@ -3,7 +3,7 @@ package com.example.vaelfardsapp.constants
 import com.example.vaelfardsapp.R
 import com.example.vaelfardsapp.models._questionModel
 
-object Questions {
+object _Questions {
     fun getQuestions(): ArrayList<_questionModel> {
         return arrayListOf(
             _questionModel("Ærlighed", "Cat ipsum dolor sit amet, paw your face to wake you up in the morning yet human is in bath tub, emergency! drowning! meooowww!", R.raw.introvid),

@@ -9,11 +9,11 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.vaelfardsapp.R
-import com.example.vaelfardsapp.models.StyrkeModel
+import com.example.vaelfardsapp.models.questionModel
 
 class StrengthsExpandableListAdapter(
     var context: Context?,
-    private var modelArray: ArrayList<StyrkeModel>
+    private var modelArray: ArrayList<questionModel>
 ) : BaseExpandableListAdapter() {
 
     override fun getGroupCount(): Int {

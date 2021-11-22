@@ -37,8 +37,13 @@
         <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/fragment_item_list_yeet.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/fragment_question.xml" value="0.33" />
         <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/fragment_question_slider.xml" value="0.33" />
-        <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/fragment_start_page.xml" value="0.33" />
+        <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/fragment_question_slider_tutorial.xml" value="0.25" />
+        <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/fragment_start_page.xml" value="0.18" />
+        <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/fragment_strengths_expandable_list_view.xml" value="0.30085470085470084" />
+        <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/layout_child.xml" value="0.22" />
+        <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/layout_group.xml" value="0.1" />
         <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/layout/styrke_fragment_item.xml" value="0.33" />
+        <entry key="..\:/Users/patp/AndroidStudioProjects/VaelfardsApp/app/src/main/res/menu/menu_main.xml" value="0.30085470085470084" />
       </map>
     </option>
   </component>

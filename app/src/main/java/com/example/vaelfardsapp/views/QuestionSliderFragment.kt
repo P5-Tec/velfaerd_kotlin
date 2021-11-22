@@ -34,6 +34,7 @@ class QuestionSliderFragment : Fragment() {
 
         binding.slider.addOnChangeListener { slider, value, fromUser ->
             viewModel.questionAnswer.value =  value.toInt()
+            Log.d("tag", "slider value is:  $value")
         }
         return binding.root
     }

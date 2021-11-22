@@ -19,7 +19,9 @@
     <string name="logotTec_contentDescription">Technical Education Copenhagen</string>
     <string name="btnStyrker_text">DE 24 STYRKER</string>
     <string name="btnVidere_text">VIDERE</string>
-    <string name="btnTilbage_text">TILBAGE</string>
+    <string name="btnTilbage_text">FORRIGE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- XPage Strings -->
 </resources>

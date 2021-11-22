@@ -8,19 +8,37 @@
     <fragment
         android:id="@+id/startPage"
         android:name="com.example.vaelfardsapp.StartPage"
-        android:label="fragment_start_page"
+        android:label="Home"
         tools:layout="@layout/fragment_start_page">
         <action
             android:id="@+id/action_startPage_to_strengthsExpandableListView"
             app:destination="@id/strengthsExpandableListView"
             app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right" />
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_startPage_to_questionFragment"
+            app:destination="@id/questionSliderTutorial" />
+        <action
+            android:id="@+id/action_startPage_to_questionFragment2"
+            app:destination="@id/questionFragment" />
     </fragment>
     <fragment
         android:id="@+id/strengthsExpandableListView"
         android:name="com.example.vaelfardsapp.expandableListView.StrengthsExpandableListView"
-        android:label="fragment_strengths_expandable_list_view"
+        android:label="De 24 Styrker"
         tools:layout="@layout/fragment_strengths_expandable_list_view" />
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.vaelfardsapp.views.QuestionFragment"
+        android:label="Spørgeskema"
+        tools:layout="@layout/fragment_question" />
+    <fragment
+        android:id="@+id/questionSliderTutorial"
+        android:name="com.example.vaelfardsapp.QuestionSliderTutorial"
+        android:label="fragment_question_slider_tutorial"
+        tools:layout="@layout/fragment_question_slider_tutorial" >
+        <action
+            android:id="@+id/action_questionSliderTutorial_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
 </navigation>

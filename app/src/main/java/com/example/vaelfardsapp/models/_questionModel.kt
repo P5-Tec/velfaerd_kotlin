@@ -1,6 +1,6 @@
 package com.example.vaelfardsapp.models
 
-class questionModel (
+class _questionModel (
     val questionSubheader: String,
     val questionMainText: String,
     val questionVideo: Int
