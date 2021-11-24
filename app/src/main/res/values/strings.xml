@@ -22,6 +22,9 @@
     <string name="btnTilbage_text">FORRIGE</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_avatar">Din Avatar</string>
+    <string name="select_top_strengths">Vælg de 2 karaktertræk der passer bedst til dig</string>
+    <string name="udfoer_text">UDFØR</string>
 
     <!-- XPage Strings -->
 </resources>
