@@ -20,11 +20,6 @@ import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.ui.PlayerView
 import com.google.android.exoplayer2.upstream.RawResourceDataSource
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonArray
-import kotlinx.serialization.json.encodeToStream
 
 class QuestionFragment : Fragment() {
 
@@ -38,14 +33,12 @@ class QuestionFragment : Fragment() {
     private lateinit var player: SimpleExoPlayer
 
     private val questionViewModel: QuestionsViewModel by viewModels()
-    private var navFuse: Boolean = false
-
     private lateinit var sharedPrefs: SharedPreferences
-    private val prefPrefix = "qpref" //prefix for SharedPreferences key value
-    private lateinit var key: String
+    private val key = "questionsKey"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         sharedPrefs = context?.getSharedPreferences("questionsAns", MODE_PRIVATE)!!
         sharedPrefs.edit().clear().apply()
     }
@@ -56,12 +49,11 @@ class QuestionFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         _binding = FragmentQuestionBinding.inflate(inflater, container, false)
+
         questionSubheader = binding.questionSubheader
         questionMaintext = binding.questionMaintext
         playerView = binding.playerView
         this.initPlayer()
-
-        key = prefPrefix + questionViewModel.getCurrentIndex
 
         return binding.root
     }
@@ -82,13 +74,10 @@ class QuestionFragment : Fragment() {
                         binding.btnVidere.text = getString(R.string.udfoer_text)
                     }
 
-                    //this.resetSlider()
                     this.updateView()
                     updateMediaItem(questionViewModel.currentQuestionVideo)
                 }
             } else {
-
-
                 findNavController().navigate(R.id.action_questionFragment_to_yourTopStrengths)
             }
         }
@@ -98,13 +87,9 @@ class QuestionFragment : Fragment() {
                 if (questionViewModel.getCurrentIndex == questionViewModel.getFirstIndex) {
                     binding.btnTilbage.visibility = GONE
                 }
-                //this.resetSlider()
+
                 updateMediaItem(questionViewModel.currentQuestionVideo)
                 this.updateView()
-
-                if (navFuse) {
-                    navFuse = false
-                }
             }
         }
 
@@ -134,11 +119,8 @@ class QuestionFragment : Fragment() {
     }
 
     private fun updateView() {
-        key = prefPrefix + questionViewModel.getCurrentIndex
-        Log.d("tag", "key value: $key")
 
         with(sharedPrefs.getInt(key, questionViewModel.DEFAULT_SLIDER_VALUE)) {
-            Log.d("tag", "key is: $key + value is: $this")
             questionViewModel.questionAnswer.value = this
         }
 
@@ -146,48 +128,22 @@ class QuestionFragment : Fragment() {
         questionMaintext!!.text = questionViewModel.currentQuestionText
     }
 
-    private val array: ArrayList<Int> = arrayListOf()
+    // 2D Array
+    private val array2d = Array(24) { IntArray(2) }
 
     private fun saveAnswer() {
         val anws = questionViewModel.questionAnswer.value
-        with(sharedPrefs.edit()) {
-            this?.putInt(key, anws!!)
-            this?.apply()
-            Log.d("tag", "Value is saved")
-        }
 
-        Log.d("result", sharedPrefs.getInt(key, 500).toString())
+        // Adding the index(Question number) and answer to 2d array
+        array2d[questionViewModel.getCurrentIndex][0] = questionViewModel.getCurrentIndex
+        array2d[questionViewModel.getCurrentIndex][1] = anws!!
 
-        array.add(anws!!)
+        Log.d("array2dFromSP", questionViewModel.getCurrentIndex.toString())
+        Log.d("array2dFromSP", questionViewModel.getQuestionsMax.toString())
 
-        if (array.size == 24) {
-            sharedPrefs.edit().putString("arraytest", Json.encodeToString(array)).apply()
-            Log.d("arraytest", sharedPrefs.getString("arraytest", "idk").toString())
-
-//            val newarray: ArrayList<String> = arrayListOf()
-//            newarray.add(sharedPrefs.getString("arraytest", "idk").toString())
-            val tst: ArrayList<Int> = Json.decodeFromString(sharedPrefs.getString("arraytest", "idk")!!)
-            //newarray.add(Json.decodeFromString(sharedPrefs.getString("arraytest", "idk")))
-            Log.d("jsonArray", tst.toString())
-
-            tst.sortDescending()
-            Log.d("jsonArray", tst.toString())
-            val finalArray: Array<Int> = tst.take(5).toTypedArray()
-//            finalArray.add(tst.take(5).toTypedArray())
-
-            Log.d("finalresult", finalArray[0].toString())
-            Log.d("finalresult", finalArray[1].toString())
-            Log.d("finalresult", finalArray[2].toString())
-            Log.d("finalresult", finalArray[3].toString())
-            Log.d("finalresult", finalArray[4].toString())
-        }
-
-    }
-
-    private fun resetSlider() {
-        with(sharedPrefs.getInt(key, questionViewModel.DEFAULT_SLIDER_VALUE)) {
-            Log.d("tag", "key is: $key + value is: $this")
-            questionViewModel.questionAnswer.value = this
+        if (questionViewModel.getCurrentIndex == questionViewModel.getQuestionsMax) {
+            questionViewModel.saveAnswersToSP(requireContext(), array2d)
         }
     }
+
 }

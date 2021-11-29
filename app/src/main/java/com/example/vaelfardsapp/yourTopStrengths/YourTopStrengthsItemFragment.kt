@@ -1,26 +1,37 @@
 package com.example.vaelfardsapp.yourTopStrengths
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.vaelfardsapp.R
-import com.example.vaelfardsapp.placeholder.PlaceholderContent
+import com.example.vaelfardsapp.constants.Questions
+import com.example.vaelfardsapp.models.questionModel
+import com.example.vaelfardsapp.viewmodels.QuestionsViewModel
 
 class YourTopStrengthsItemFragment : Fragment() {
 
     private var columnCount = 1
 
+    private val questionViewModel: QuestionsViewModel by viewModels()
+    private val qs = Questions
+    private val newItems = arrayListOf<questionModel>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        arguments?.let {
-            columnCount = it.getInt(ARG_COLUMN_COUNT)
+        val answers = questionViewModel.getAnswersFromSP(requireContext())
+        val questions = qs.getQuestions()
+
+        for ((i, _) in answers.withIndex()) {
+            newItems.add(questions[answers[i][0]])
         }
+
     }
 
     override fun onCreateView(
@@ -37,24 +48,10 @@ class YourTopStrengthsItemFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = YourTopStrengthsRecyclerViewAdapter(PlaceholderContent.ITEMS)
+
+                adapter = YourTopStrengthsRecyclerViewAdapter(newItems)
             }
         }
         return view
-    }
-
-    companion object {
-
-        // TODO: Customize parameter argument names
-        const val ARG_COLUMN_COUNT = "column-count"
-
-        // TODO: Customize parameter initialization
-        @JvmStatic
-        fun newInstance(columnCount: Int) =
-            YourTopStrengthsItemFragment().apply {
-                arguments = Bundle().apply {
-                    putInt(ARG_COLUMN_COUNT, columnCount)
-                }
-            }
     }
 }
