@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/maje/Documents/Android/velfaerd_kotlin/app/src/main/res/layout/activity_main.xml" value="0.39356884057971014" />
+        <entry key="..\:/Users/maje/Documents/Android/velfaerd_kotlin/app/src/main/res/layout/content_main.xml" value="0.39356884057971014" />
         <entry key="..\:/Users/maje/Documents/Android/velfaerd_kotlin/app/src/main/res/layout/fragment_question.xml" value="0.41304347826086957" />
         <entry key="..\:/Users/maje/Documents/Android/velfaerd_kotlin/app/src/main/res/layout/fragment_question_slider_tutorial.xml" value="0.40443840579710144" />
         <entry key="..\:/Users/maje/Documents/Android/velfaerd_kotlin/app/src/main/res/layout/fragment_start_page.xml" value="0.41304347826086957" />
