@@ -26,5 +26,12 @@
     <string name="select_top_strengths">Vælg de 2 karaktertræk der passer bedst til dig</string>
     <string name="udfoer_text">UDFØR</string>
 
+    <!-- Toolbar Title Strings For Fragments -->
+    <string name="startpageTitle">Hjem</string>
+    <string name="tutorialTitle">Tutorial</string>
+    <string name="strengthsExpandleListViewTitle">De 24 Styrker</string>
+    <string name="questionsTitle">Spørgsmål</string>
+    <string name="yourTopStrengthsTitle">Dine Top Styrker</string>
+
     <!-- XPage Strings -->
 </resources>

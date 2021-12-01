@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/startPage"
         android:name="com.example.vaelfardsapp.StartPage"
-        android:label="Home"
+        android:label="@string/startpageTitle"
         tools:layout="@layout/fragment_start_page">
         <action
             android:id="@+id/action_startPage_to_strengthsExpandableListView"
@@ -25,13 +25,13 @@
     <fragment
         android:id="@+id/strengthsExpandableListView"
         android:name="com.example.vaelfardsapp.expandableListView.StrengthsExpandableListView"
-        android:label="De 24 Styrker"
+        android:label="@string/strengthsExpandleListViewTitle"
         tools:layout="@layout/fragment_strengths_expandable_list_view" />
     <fragment
         android:id="@+id/questionFragment"
         android:name="com.example.vaelfardsapp.views.QuestionFragment"
         android:label="Spørgeskema"
-        tools:layout="@layout/fragment_question" >
+        tools:layout="@layout/fragment_question">
         <action
             android:id="@+id/action_questionFragment_to_yourTopStrengths"
             app:destination="@id/yourTopStrengths" />
@@ -39,8 +39,8 @@
     <fragment
         android:id="@+id/questionSliderTutorial"
         android:name="com.example.vaelfardsapp.QuestionSliderTutorial"
-        android:label="fragment_question_slider_tutorial"
-        tools:layout="@layout/fragment_question_slider_tutorial" >
+        android:label="@string/tutorialTitle"
+        tools:layout="@layout/fragment_question_slider_tutorial">
         <action
             android:id="@+id/action_questionSliderTutorial_to_questionFragment"
             app:destination="@id/questionFragment" />
@@ -48,8 +48,8 @@
     <fragment
         android:id="@+id/yourTopStrengths"
         android:name="com.example.vaelfardsapp.yourTopStrengths.YourTopStrengths"
-        android:label="fragment_your_top_strengths"
-        tools:layout="@layout/fragment_your_top_strengths" >
+        android:label="@string/yourTopStrengthsTitle"
+        tools:layout="@layout/fragment_your_top_strengths">
         <action
             android:id="@+id/action_yourTopStrengthsBackNavigation"
             app:destination="@id/questionFragment" />
