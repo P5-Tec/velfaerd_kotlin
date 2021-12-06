@@ -36,6 +36,7 @@ class StartPage : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         _binding = FragmentStartPageBinding.inflate(inflater, container, false)
+        
         playerView = binding.playerView!!
         return binding.root
     }
