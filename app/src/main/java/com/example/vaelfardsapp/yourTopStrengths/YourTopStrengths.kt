@@ -26,7 +26,7 @@ class YourTopStrengths : Fragment() {
         }
 
         binding.btnVidere.setOnClickListener {
-            findNavController().navigate(R.id.action_yourTopStrengths_to_yourAvatarFragment)
+            findNavController().navigate(R.id.action_yourTopStrengths_to_sendResultFragment)
         }
 
         return binding.root

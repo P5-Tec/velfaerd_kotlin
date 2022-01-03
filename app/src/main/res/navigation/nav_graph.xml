@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/startPage">
+    app:startDestination="@id/sendResultFragment">
 
     <fragment
         android:id="@+id/startPage"
@@ -25,6 +25,7 @@
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
+
     <fragment
         android:id="@+id/strengthsExpandableListView"
         android:name="com.example.vaelfardsapp.expandableListView.StrengthsExpandableListView"
@@ -43,6 +44,7 @@
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
+
     <fragment
         android:id="@+id/questionSliderTutorial"
         android:name="com.example.vaelfardsapp.QuestionSliderTutorial"
@@ -56,6 +58,7 @@
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
+
     <fragment
         android:id="@+id/yourTopStrengths"
         android:name="com.example.vaelfardsapp.yourTopStrengths.YourTopStrengths"
@@ -65,16 +68,17 @@
             android:id="@+id/action_yourTopStrengthsBackNavigation"
             app:destination="@id/questionFragment" />
         <action
-            android:id="@+id/action_yourTopStrengths_to_yourAvatarFragment"
-            app:destination="@id/yourAvatarFragment"
+            android:id="@+id/action_yourTopStrengths_to_sendResultFragment"
+            app:destination="@id/sendResultFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
+
     <fragment
-        android:id="@+id/yourAvatarFragment"
-        android:name="com.example.vaelfardsapp.YourAvatarFragment"
-        android:label="Avatar"
-        tools:layout="@layout/fragment_your_avatar" />
+        android:id="@+id/sendResultFragment"
+        android:name="com.example.vaelfardsapp.SendResultFragment"
+        android:label="fragment_send_result"
+        tools:layout="@layout/fragment_send_result" />
 </navigation>
