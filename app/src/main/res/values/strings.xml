@@ -1,15 +1,9 @@
 <resources>
     <string name="app_name">VaelfardsApp</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="users_name_here">Users Name Here</string>
     <string name="question_subheader">Question Subheader</string>
     <string name="question_ipsum">Cat ipsum dolor sit amet, paw your face to wake you up in the morning yet human is in bath tub, emergency! drowning! meooowww! </string>
@@ -19,12 +13,13 @@
     <string name="logotTec_contentDescription">Technical Education Copenhagen</string>
     <string name="styrk_dit_valg">Styrk Dit Valg</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="your_avatar">Din Avatar</string>
     <string name="select_top_strengths">Vælg de 2 karaktertræk der passer bedst til dig</string>
     <string name="udfoer_text">UDFØR</string>
     <string name="send_resultat">Send Resultat</string>
+    <string name="indtast_email">Indtast Email</string>
+    <string name="avatar_description">Dette er din avatar baseret på dine karaktertræk</string>
+    <string name="infoTv">Send din avatar for at afslutte ved at trykke på Send knappen.</string>
 
     <!-- Button Strings -->
     <string name="btnStyrker_text">DE 24 STYRKER</string>
@@ -38,9 +33,7 @@
     <string name="tutorialTitle">Tutorial</string>
     <string name="strengthsExpandleListViewTitle">De 24 Styrker</string>
     <string name="questionsTitle">Spørgsmål</string>
-    <string name="yourTopStrengthsTitle">Dine Top Styrker</string>
-    <string name="indtast_email">Indtast Email</string>
+    <string name="yourTopStrengthsTitle">Dine Karaktertræk</string>
+    <string name="sendResultTitle">Din Avatar</string>
 
-
-    <!-- XPage Strings -->
 </resources>

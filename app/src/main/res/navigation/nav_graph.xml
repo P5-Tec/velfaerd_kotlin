@@ -79,6 +79,6 @@
     <fragment
         android:id="@+id/sendResultFragment"
         android:name="com.example.vaelfardsapp.SendResultFragment"
-        android:label="fragment_send_result"
+        android:label="@string/sendResultTitle"
         tools:layout="@layout/fragment_send_result" />
 </navigation>
