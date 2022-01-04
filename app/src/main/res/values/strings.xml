@@ -1,9 +1,5 @@
 <resources>
-    <string name="app_name">VaelfardsApp</string>
-    <string name="action_settings">Settings</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="app_name">VelfærdsApp</string>
     <string name="users_name_here">Users Name Here</string>
     <string name="question_subheader">Question Subheader</string>
     <string name="question_ipsum">Cat ipsum dolor sit amet, paw your face to wake you up in the morning yet human is in bath tub, emergency! drowning! meooowww! </string>
@@ -19,7 +15,7 @@
     <string name="send_resultat">Send Resultat</string>
     <string name="indtast_email">Indtast Email</string>
     <string name="avatar_description">Dette er din avatar baseret på dine karaktertræk</string>
-    <string name="infoTv">Send din avatar for at afslutte ved at trykke på Send knappen.</string>
+    <string name="info_Tv">Send din avatar for at afslutte ved at trykke på Send knappen.</string>
 
     <!-- Button Strings -->
     <string name="btnStyrker_text">DE 24 STYRKER</string>
@@ -29,11 +25,11 @@
     <string name="btnSend_text">SEND</string>
 
     <!-- Toolbar Title Strings For Fragments -->
-    <string name="startpageTitle">Hjem</string>
-    <string name="tutorialTitle">Tutorial</string>
-    <string name="strengthsExpandleListViewTitle">De 24 Styrker</string>
-    <string name="questionsTitle">Spørgsmål</string>
-    <string name="yourTopStrengthsTitle">Dine Karaktertræk</string>
-    <string name="sendResultTitle">Din Avatar</string>
+    <string name="startpage_Title">Hjem</string>
+    <string name="tutorial_Title">Tutorial</string>
+    <string name="strengthsExpandleListView_Title">De 24 Styrker</string>
+    <string name="questions_Title">Spørgsmål</string>
+    <string name="yourTopStrengths_Title">Dine Karaktertræk</string>
+    <string name="sendResult_Title">Din Avatar</string>
 
 </resources>

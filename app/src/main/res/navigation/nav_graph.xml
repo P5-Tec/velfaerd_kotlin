@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/startPage"
         android:name="com.example.vaelfardsapp.StartPage"
-        android:label="@string/startpageTitle"
+        android:label="@string/startpage_Title"
         tools:layout="@layout/fragment_start_page">
         <action
             android:id="@+id/action_startPage_to_strengthsExpandableListView"
@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/strengthsExpandableListView"
         android:name="com.example.vaelfardsapp.expandableListView.StrengthsExpandableListView"
-        android:label="@string/strengthsExpandleListViewTitle"
+        android:label="@string/strengthsExpandleListView_Title"
         tools:layout="@layout/fragment_strengths_expandable_list_view" />
     <fragment
         android:id="@+id/questionFragment"
@@ -48,7 +48,7 @@
     <fragment
         android:id="@+id/questionSliderTutorial"
         android:name="com.example.vaelfardsapp.QuestionSliderTutorial"
-        android:label="@string/tutorialTitle"
+        android:label="@string/tutorial_Title"
         tools:layout="@layout/fragment_question_slider_tutorial">
         <action
             android:id="@+id/action_questionSliderTutorial_to_questionFragment"
@@ -62,7 +62,7 @@
     <fragment
         android:id="@+id/yourTopStrengths"
         android:name="com.example.vaelfardsapp.yourTopStrengths.YourTopStrengths"
-        android:label="@string/yourTopStrengthsTitle"
+        android:label="@string/yourTopStrengths_Title"
         tools:layout="@layout/fragment_your_top_strengths">
         <action
             android:id="@+id/action_yourTopStrengthsBackNavigation"
@@ -79,6 +79,6 @@
     <fragment
         android:id="@+id/sendResultFragment"
         android:name="com.example.vaelfardsapp.SendResultFragment"
-        android:label="@string/sendResultTitle"
+        android:label="@string/sendResult_Title"
         tools:layout="@layout/fragment_send_result" />
 </navigation>
