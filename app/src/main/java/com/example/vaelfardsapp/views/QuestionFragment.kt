@@ -16,8 +16,8 @@ import androidx.navigation.fragment.findNavController
 import com.example.vaelfardsapp.R
 import com.example.vaelfardsapp.databinding.FragmentQuestionBinding
 import com.example.vaelfardsapp.viewmodels.QuestionsViewModel
+import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.ui.PlayerView
 import com.google.android.exoplayer2.upstream.RawResourceDataSource
 
@@ -30,7 +30,7 @@ class QuestionFragment : Fragment() {
     private var questionMaintext: TextView? = null
 
     private lateinit var playerView: PlayerView
-    private lateinit var player: SimpleExoPlayer
+    private lateinit var player: ExoPlayer
 
     private val questionViewModel: QuestionsViewModel by viewModels()
     private lateinit var sharedPrefs: SharedPreferences
@@ -103,7 +103,7 @@ class QuestionFragment : Fragment() {
     private fun initPlayer() {
         val mediaItem =
             MediaItem.fromUri(RawResourceDataSource.buildRawResourceUri(questionViewModel.currentQuestionVideo))
-        player = SimpleExoPlayer.Builder(requireContext()).build().also { exoPlayer ->
+        player = ExoPlayer.Builder(requireContext()).build().also { exoPlayer ->
             playerView.player = exoPlayer               // binds together view and player
             playerView.controllerAutoShow = true        // show the play button
             playerView.controllerShowTimeoutMs = 800    // sets control fade time
