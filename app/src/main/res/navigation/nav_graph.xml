@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/sendResultFragment">
+    app:startDestination="@id/questionSliderTutorial">
 
     <fragment
         android:id="@+id/startPage"
@@ -80,5 +80,9 @@
         android:id="@+id/sendResultFragment"
         android:name="com.example.vaelfardsapp.SendResultFragment"
         android:label="@string/sendResult_Title"
-        tools:layout="@layout/fragment_send_result" />
+        tools:layout="@layout/fragment_send_result" >
+        <action
+            android:id="@+id/action_sendResultBackNavigation"
+            app:destination="@id/yourTopStrengths" />
+    </fragment>
 </navigation>

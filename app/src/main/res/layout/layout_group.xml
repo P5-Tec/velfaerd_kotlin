@@ -12,13 +12,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
+        android:contentDescription="@string/dropdown_arrow"
         tools:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
     <ImageView
         android:id="@+id/ic_strength"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:contentDescription="strength icon"
+        android:contentDescription="@string/strength_icon"
         tools:src="@drawable/kreativitet" />
 
     <TextView
