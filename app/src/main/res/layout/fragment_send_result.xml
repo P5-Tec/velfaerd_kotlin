@@ -49,13 +49,13 @@
         android:text="@string/info_Tv"
         android:textAlignment="center"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnForrige"
+        app:layout_constraintBottom_toTopOf="@+id/btnTilbage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnForrige"
+        android:id="@+id/btnTilbage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -76,6 +76,6 @@
         android:text="@string/btnSend_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnForrige" />
+        app:layout_constraintStart_toEndOf="@+id/btnTilbage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

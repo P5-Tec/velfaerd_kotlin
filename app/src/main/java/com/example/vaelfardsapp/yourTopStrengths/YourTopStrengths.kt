@@ -21,7 +21,7 @@ class YourTopStrengths : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentYourTopStrengthsBinding.inflate(inflater, container, false)
 
-        binding.btnForrige.setOnClickListener {
+        binding.btnTilbage.setOnClickListener {
             findNavController().navigate(R.id.action_yourTopStrengthsBackNavigation)
         }
 

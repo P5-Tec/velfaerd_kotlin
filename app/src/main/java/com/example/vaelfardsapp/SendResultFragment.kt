@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.FileProvider.getUriForFile
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.vaelfardsapp.databinding.FragmentSendResultBinding
 import java.io.File
 
@@ -25,6 +26,10 @@ class SendResultFragment : Fragment() {
 
         binding.btnSend.setOnClickListener {
             shareWithIntent()
+        }
+
+        binding.btnTilbage.setOnClickListener {
+            findNavController().navigate(R.id.action_sendResultBackNavigation)
         }
 
         return binding.root
