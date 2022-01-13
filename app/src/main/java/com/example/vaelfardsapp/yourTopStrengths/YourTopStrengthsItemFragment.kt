@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,12 +14,14 @@ import com.example.vaelfardsapp.R
 import com.example.vaelfardsapp.constants.Questions
 import com.example.vaelfardsapp.models.questionModel
 import com.example.vaelfardsapp.viewmodels.QuestionsViewModel
+import com.example.vaelfardsapp.viewmodels.YourTopStrengthsViewModel
 
 class YourTopStrengthsItemFragment : Fragment() {
 
     private var columnCount = 1
 
     private val questionViewModel: QuestionsViewModel by viewModels()
+    private val yourTopStrengthsViewModel: YourTopStrengthsViewModel by activityViewModels()
     private val qs = Questions
     private val newItems = arrayListOf<questionModel>()
 
@@ -49,7 +52,7 @@ class YourTopStrengthsItemFragment : Fragment() {
                     else -> GridLayoutManager(context, columnCount)
                 }
 
-                adapter = YourTopStrengthsRecyclerViewAdapter(newItems)
+                adapter = YourTopStrengthsRecyclerViewAdapter(newItems, yourTopStrengthsViewModel)
             }
         }
         return view
