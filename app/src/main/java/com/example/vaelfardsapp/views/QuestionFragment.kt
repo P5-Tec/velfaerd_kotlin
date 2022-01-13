@@ -26,9 +26,6 @@ class QuestionFragment : Fragment() {
     private var _binding: FragmentQuestionBinding? = null
     private val binding get() = _binding!!
 
-    private var questionSubheader: TextView? = null
-    private var questionMaintext: TextView? = null
-
     private lateinit var playerView: PlayerView
     private lateinit var player: ExoPlayer
 
@@ -50,8 +47,6 @@ class QuestionFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentQuestionBinding.inflate(inflater, container, false)
 
-        questionSubheader = binding.questionSubheader
-        questionMaintext = binding.questionMaintext
         playerView = binding.playerView
         this.initPlayer()
 
@@ -124,8 +119,8 @@ class QuestionFragment : Fragment() {
             questionViewModel.questionAnswer.value = this
         }
 
-        questionSubheader!!.text = questionViewModel.currentQuestionSubHeader
-        questionMaintext!!.text = questionViewModel.currentQuestionText
+        binding.questionSubheader.text = questionViewModel.currentQuestionSubHeader
+        binding.questionMaintext.text = questionViewModel.currentQuestionText
     }
 
     // 2D Array
