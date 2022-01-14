@@ -66,7 +66,9 @@
         tools:layout="@layout/fragment_your_top_strengths">
         <action
             android:id="@+id/action_yourTopStrengthsBackNavigation"
-            app:destination="@id/questionFragment" />
+            app:destination="@id/questionFragment"
+            app:popUpTo="@id/questionFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_yourTopStrengths_to_sendResultFragment"
             app:destination="@id/sendResultFragment"
@@ -83,6 +85,8 @@
         tools:layout="@layout/fragment_send_result">
         <action
             android:id="@+id/action_sendResultBackNavigation"
-            app:destination="@id/yourTopStrengths" />
+            app:destination="@id/yourTopStrengths"
+            app:popUpTo="@id/yourTopStrengths"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
