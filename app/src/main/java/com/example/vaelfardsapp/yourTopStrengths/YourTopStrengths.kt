@@ -30,6 +30,8 @@ class YourTopStrengths : Fragment() {
         }
 
         binding.btnVidere.setOnClickListener {
+            // Setting varible to false, so checkboxes will be enabled again if you navigate back
+            viewModel.setIs2Selected(false)
             findNavController().navigate(R.id.action_yourTopStrengths_to_sendResultFragment)
         }
 
