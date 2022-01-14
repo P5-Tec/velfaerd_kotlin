@@ -1,18 +1,20 @@
 package com.example.vaelfardsapp.yourTopStrengths
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.CheckBox
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vaelfardsapp.databinding.FragmentYourTopStrengthsRecyclerviewItemBinding
-import com.example.vaelfardsapp.models.questionModel
+import com.example.vaelfardsapp.models.QuestionModel
+import com.example.vaelfardsapp.viewmodels.YourTopStrengthsViewModel
 
 class YourTopStrengthsRecyclerViewAdapter(
-    private val values: List<questionModel>
+    private val values: List<QuestionModel>,
+    private val viewModel: YourTopStrengthsViewModel
 ) : RecyclerView.Adapter<YourTopStrengthsRecyclerViewAdapter.ViewHolder>() {
 
     private var count = 0
-    private var is2Selected = false
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
@@ -23,14 +25,14 @@ class YourTopStrengthsRecyclerViewAdapter(
                 ), parent, false
             )
         )
-
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = values[position]
         holder.checkbox.text = item.styrkeName
 
-        if (is2Selected) {
+        if (viewModel.getIs2Selected()) {
             if (!holder.checkbox.isChecked) {
                 holder.checkbox.isEnabled = false
             }
@@ -46,11 +48,11 @@ class YourTopStrengthsRecyclerViewAdapter(
                 count--
             }
 
-            if (count == 2) {
-                is2Selected = true
+            if (count >= 2) {
+                viewModel.setIs2Selected(true)
                 notifyDataSetChanged()
             } else {
-                is2Selected = false
+                viewModel.setIs2Selected(false)
                 notifyDataSetChanged()
             }
         }

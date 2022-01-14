@@ -29,7 +29,7 @@ class StartPage : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentStartPageBinding.inflate(inflater, container, false)
 
-        playerView = binding.playerView!!
+        playerView = binding.playerView
         return binding.root
     }
 

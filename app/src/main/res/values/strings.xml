@@ -10,14 +10,15 @@
     <string name="styrk_dit_valg">Styrk Dit Valg</string>
 
     <string name="your_avatar">Din Avatar</string>
-    <string name="select_top_strengths">Vælg de 2 karaktertræk der passer bedst til dig</string>
+    <string name="select_top_strengths">Vælg de 2 karaktertræk der passer bedst til dig. Disse karaktertræk vil skabe din avatar.</string>
     <string name="udfoer_text">UDFØR</string>
     <string name="send_resultat">Send Resultat</string>
     <string name="indtast_email">Indtast Email</string>
     <string name="avatar_description">Dette er din avatar baseret på dine karaktertræk</string>
-    <string name="info_Tv">Send din avatar for at afslutte ved at trykke på Send knappen.</string>
+    <string name="info_Tv">Tryk på Send knappen for at dele din avatar med andre</string>
     <string name="dropdown_arrow">Dropdown Arrow</string>
     <string name="strength_icon">Strength Icon</string>
+    <string name="her_kan_du_se_betydningen_for_hver_svarmulighed">Her kan du se betydningen for hver svarmulighed</string>
 
     <!-- Button Strings -->
     <string name="btnStyrker_text">DE 24 STYRKER</string>
@@ -33,5 +34,15 @@
     <string name="questions_Title">Spørgsmål</string>
     <string name="yourTopStrengths_Title">Dine Karaktertræk</string>
     <string name="sendResult_Title">Din Avatar</string>
+
+    <!-- Slider Strings -->
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="ikke_god">Ikke god</string>
+    <string name="middel">Middel</string>
+    <string name="meget_god">Meget god</string>
 
 </resources>

@@ -13,17 +13,17 @@
         <action
             android:id="@+id/action_startPage_to_strengthsExpandableListView"
             app:destination="@id/strengthsExpandableListView"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_startPage_to_questionFragment"
             app:destination="@id/questionSliderTutorial"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
 
     <fragment
@@ -34,15 +34,15 @@
     <fragment
         android:id="@+id/questionFragment"
         android:name="com.example.vaelfardsapp.views.QuestionFragment"
-        android:label="Spørgeskema"
+        android:label="@string/questions_Title"
         tools:layout="@layout/fragment_question">
         <action
             android:id="@+id/action_questionFragment_to_yourTopStrengths"
             app:destination="@id/yourTopStrengths"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
 
     <fragment
@@ -55,8 +55,8 @@
             app:destination="@id/questionFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
 
     <fragment
@@ -66,23 +66,31 @@
         tools:layout="@layout/fragment_your_top_strengths">
         <action
             android:id="@+id/action_yourTopStrengthsBackNavigation"
-            app:destination="@id/questionFragment" />
+            app:destination="@id/questionFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/questionFragment"
+            app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_yourTopStrengths_to_sendResultFragment"
             app:destination="@id/sendResultFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
 
     <fragment
         android:id="@+id/sendResultFragment"
         android:name="com.example.vaelfardsapp.SendResultFragment"
         android:label="@string/sendResult_Title"
-        tools:layout="@layout/fragment_send_result" >
+        tools:layout="@layout/fragment_send_result">
         <action
             android:id="@+id/action_sendResultBackNavigation"
-            app:destination="@id/yourTopStrengths" />
+            app:destination="@id/yourTopStrengths"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/yourTopStrengths"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

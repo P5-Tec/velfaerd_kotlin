@@ -5,15 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.vaelfardsapp.R
-import com.example.vaelfardsapp.models.questionModel
+import com.example.vaelfardsapp.models.QuestionModel
 
 class StrengthsExpandableListAdapter(
     var context: Context?,
-    private var modelArray: ArrayList<questionModel>
+    private var modelArray: ArrayList<QuestionModel>
 ) : BaseExpandableListAdapter() {
 
     override fun getGroupCount(): Int {
@@ -54,15 +53,15 @@ class StrengthsExpandableListAdapter(
         convertView: View?,
         parent: ViewGroup?
     ): View? {
-        var convertView = convertView
-        if (convertView == null) {
+        var cView = convertView
+        if (cView == null) {
             val inflater =
                 context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            convertView = inflater.inflate(R.layout.layout_group, null)
+            cView = inflater.inflate(R.layout.layout_group, parent, false)
         }
-        val indicator = convertView?.findViewById<ImageView>(R.id.indicator)
-        val title = convertView?.findViewById<TextView>(R.id.tv_title)
-        val icon = convertView?.findViewById<ImageView>(R.id.ic_strength)
+        val indicator = cView?.findViewById<ImageView>(R.id.indicator)
+        val title = cView?.findViewById<TextView>(R.id.tv_title)
+        val icon = cView?.findViewById<ImageView>(R.id.ic_strength)
 
         if (isExpanded) {
             indicator?.setImageResource(R.drawable.ic_baseline_keyboard_arrow_up_24)
@@ -72,7 +71,7 @@ class StrengthsExpandableListAdapter(
 
         title?.text = getGroup(groupPosition)
         icon?.setImageResource(getIcon(groupPosition))
-        return convertView
+        return cView
     }
 
     override fun getChildView(
@@ -82,16 +81,16 @@ class StrengthsExpandableListAdapter(
         convertView: View?,
         parent: ViewGroup?
     ): View? {
-        var convertView = convertView
-        if (convertView == null) {
+        var cView = convertView
+        if (cView == null) {
             val inflater =
                 context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            convertView = inflater.inflate(R.layout.layout_child, null)
+            cView = inflater.inflate(R.layout.layout_child, parent, false)
         }
 
-        val title = convertView?.findViewById<TextView>(R.id.tv_child)
+        val title = cView?.findViewById<TextView>(R.id.tv_child)
         title?.text = getChild(groupPosition, groupPosition)
-        return convertView
+        return cView
     }
 
     override fun isChildSelectable(groupPosition: Int, childPosition: Int): Boolean {

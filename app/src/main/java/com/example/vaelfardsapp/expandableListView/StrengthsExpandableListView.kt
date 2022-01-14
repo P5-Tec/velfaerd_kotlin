@@ -7,14 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.vaelfardsapp.constants.Questions
 import com.example.vaelfardsapp.databinding.FragmentStrengthsExpandableListViewBinding
-import com.example.vaelfardsapp.models.questionModel
+import com.example.vaelfardsapp.models.QuestionModel
 
 class StrengthsExpandableListView : Fragment() {
 
     private var _binding: FragmentStrengthsExpandableListViewBinding? = null
     private val binding get() = _binding!!
 
-    private var modelArray: ArrayList<questionModel> = arrayListOf()
+    private var modelArray: ArrayList<QuestionModel> = arrayListOf()
 
     override fun onCreateView(
         inflater: LayoutInflater,

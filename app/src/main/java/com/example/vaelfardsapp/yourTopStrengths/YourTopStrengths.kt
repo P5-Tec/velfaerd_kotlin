@@ -5,14 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.vaelfardsapp.R
 import com.example.vaelfardsapp.databinding.FragmentYourTopStrengthsBinding
+import com.example.vaelfardsapp.viewmodels.YourTopStrengthsViewModel
 
 class YourTopStrengths : Fragment() {
 
     private var _binding: FragmentYourTopStrengthsBinding? = null
     private val binding get() = _binding!!
+
+    private val viewModel: YourTopStrengthsViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,9 +30,16 @@ class YourTopStrengths : Fragment() {
         }
 
         binding.btnVidere.setOnClickListener {
+            // Setting varible to false, so checkboxes will be enabled again if you navigate back
+            viewModel.setIs2Selected(false)
             findNavController().navigate(R.id.action_yourTopStrengths_to_sendResultFragment)
         }
 
+        viewModel.is2Selected.observe(viewLifecycleOwner, {
+            binding.btnVidere.isEnabled = it
+        })
+
         return binding.root
     }
+
 }

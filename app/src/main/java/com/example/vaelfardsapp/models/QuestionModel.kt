@@ -1,6 +1,6 @@
 package com.example.vaelfardsapp.models
 
-data class questionModel(
+data class QuestionModel(
     val styrkeName: String,
     val styrkeTxt: String,
     val imagePath: Int,

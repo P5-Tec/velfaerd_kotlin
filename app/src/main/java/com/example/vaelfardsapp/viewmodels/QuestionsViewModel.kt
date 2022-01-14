@@ -23,7 +23,7 @@ class QuestionsViewModel : ViewModel() {
         questionAnswer.value = 3
     }
 
-    val DEFAULT_SLIDER_VALUE: Int
+    val defaultSliderValue: Int
         get() {
             return 3
         }
@@ -62,10 +62,6 @@ class QuestionsViewModel : ViewModel() {
         get() {
             return (questions.lastIndex)
         }
-
-    fun resetSlider() {
-        questionAnswer.value = DEFAULT_SLIDER_VALUE
-    }
 
     fun nextQuestion() {
         if (currentIndex < questions.lastIndex) {

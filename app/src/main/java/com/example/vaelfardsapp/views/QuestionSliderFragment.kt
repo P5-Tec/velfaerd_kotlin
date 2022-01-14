@@ -1,7 +1,6 @@
 package com.example.vaelfardsapp.views
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,13 +23,12 @@ class QuestionSliderFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentQuestionSliderBinding.inflate(inflater, container, false)
 
-        viewModel.questionAnswer.observe(viewLifecycleOwner, { newAnswer ->
+        viewModel.questionAnswer.observe(viewLifecycleOwner, {
             binding.slider.value = viewModel.returnValFloat!!
         })
 
-        binding.slider.addOnChangeListener { slider, value, fromUser ->
+        binding.slider.addOnChangeListener { _, value, _ ->
             viewModel.questionAnswer.value = value.toInt()
-            Log.d("tag", "slider value is:  $value")
         }
 
         return binding.root

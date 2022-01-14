@@ -9,7 +9,6 @@ import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -25,9 +24,6 @@ class QuestionFragment : Fragment() {
 
     private var _binding: FragmentQuestionBinding? = null
     private val binding get() = _binding!!
-
-    private var questionSubheader: TextView? = null
-    private var questionMaintext: TextView? = null
 
     private lateinit var playerView: PlayerView
     private lateinit var player: ExoPlayer
@@ -50,8 +46,6 @@ class QuestionFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentQuestionBinding.inflate(inflater, container, false)
 
-        questionSubheader = binding.questionSubheader
-        questionMaintext = binding.questionMaintext
         playerView = binding.playerView
         this.initPlayer()
 
@@ -120,12 +114,12 @@ class QuestionFragment : Fragment() {
 
     private fun updateView() {
 
-        with(sharedPrefs.getInt(key, questionViewModel.DEFAULT_SLIDER_VALUE)) {
+        with(sharedPrefs.getInt(key, questionViewModel.defaultSliderValue)) {
             questionViewModel.questionAnswer.value = this
         }
 
-        questionSubheader!!.text = questionViewModel.currentQuestionSubHeader
-        questionMaintext!!.text = questionViewModel.currentQuestionText
+        binding.questionSubheader.text = questionViewModel.currentQuestionSubHeader
+        binding.questionMaintext.text = questionViewModel.currentQuestionText
     }
 
     // 2D Array

@@ -10,8 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp"
-        android:paddingEnd="10dp"
-        tools:text="Du tænker tit ‘Hmm, gad vide, om det kan gøres på en ny eller smartere måde?’ Du er god til at få idéer." />
+        tools:text="@string/question_ipsum" />
 
     <View
         android:layout_width="match_parent"
