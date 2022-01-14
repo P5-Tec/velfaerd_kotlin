@@ -9,7 +9,6 @@ import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -115,7 +114,7 @@ class QuestionFragment : Fragment() {
 
     private fun updateView() {
 
-        with(sharedPrefs.getInt(key, questionViewModel.DEFAULT_SLIDER_VALUE)) {
+        with(sharedPrefs.getInt(key, questionViewModel.defaultSliderValue)) {
             questionViewModel.questionAnswer.value = this
         }
 

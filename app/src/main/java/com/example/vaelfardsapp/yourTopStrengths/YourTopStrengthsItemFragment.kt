@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vaelfardsapp.R
 import com.example.vaelfardsapp.constants.Questions
-import com.example.vaelfardsapp.models.questionModel
+import com.example.vaelfardsapp.models.QuestionModel
 import com.example.vaelfardsapp.viewmodels.QuestionsViewModel
 import com.example.vaelfardsapp.viewmodels.YourTopStrengthsViewModel
 
@@ -23,7 +23,7 @@ class YourTopStrengthsItemFragment : Fragment() {
     private val questionViewModel: QuestionsViewModel by viewModels()
     private val yourTopStrengthsViewModel: YourTopStrengthsViewModel by activityViewModels()
     private val qs = Questions
-    private val newItems = arrayListOf<questionModel>()
+    private val newItems = arrayListOf<QuestionModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -5,15 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.vaelfardsapp.R
-import com.example.vaelfardsapp.models.questionModel
+import com.example.vaelfardsapp.models.QuestionModel
 
 class StrengthsExpandableListAdapter(
     var context: Context?,
-    private var modelArray: ArrayList<questionModel>
+    private var modelArray: ArrayList<QuestionModel>
 ) : BaseExpandableListAdapter() {
 
     override fun getGroupCount(): Int {

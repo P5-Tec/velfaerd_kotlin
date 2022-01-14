@@ -6,11 +6,11 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vaelfardsapp.databinding.FragmentYourTopStrengthsRecyclerviewItemBinding
-import com.example.vaelfardsapp.models.questionModel
+import com.example.vaelfardsapp.models.QuestionModel
 import com.example.vaelfardsapp.viewmodels.YourTopStrengthsViewModel
 
 class YourTopStrengthsRecyclerViewAdapter(
-    private val values: List<questionModel>,
+    private val values: List<QuestionModel>,
     private val viewModel: YourTopStrengthsViewModel
 ) : RecyclerView.Adapter<YourTopStrengthsRecyclerViewAdapter.ViewHolder>() {
 
