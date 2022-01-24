@@ -12,6 +12,7 @@ import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.ui.PlayerView
 import com.google.android.exoplayer2.upstream.RawResourceDataSource
+import com.google.android.material.color.DynamicColors
 
 class StartPage : Fragment() {
 
