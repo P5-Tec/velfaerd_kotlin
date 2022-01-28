@@ -86,12 +86,6 @@ class QuestionFragment : Fragment() {
                 this.updateView()
             }
         }
-
-        // FIXME - TEMPORARY BUTTON TO SKIP QUESTIONS, DELETE BEFORE RELEASE
-        binding.btnSkipTemp?.setOnClickListener {
-            questionViewModel.skipQuestions()
-            this.updateView()
-        }
     }
 
     private fun initPlayer() {

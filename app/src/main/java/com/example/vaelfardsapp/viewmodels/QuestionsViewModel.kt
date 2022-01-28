@@ -94,9 +94,4 @@ class QuestionsViewModel : ViewModel() {
         return array2dFromSP.take(5)
     }
 
-
-    // FIXME TEMPORARY, DELETE BEFORE RELEASE
-    fun skipQuestions() {
-        currentIndex = 23
-    }
 }
